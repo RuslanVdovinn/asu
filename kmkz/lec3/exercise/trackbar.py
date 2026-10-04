@@ -48,12 +48,12 @@ def main():
         hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     cv2.namedWindow('Trackbars', cv2.WINDOW_NORMAL)
-    # cv2.namedWindow('Original', cv2.WINDOW_NORMAL)
+    cv2.namedWindow('Original', cv2.WINDOW_NORMAL)
     cv2.namedWindow('Mask',     cv2.WINDOW_NORMAL)
     # cv2.namedWindow('Result',   cv2.WINDOW_NORMAL)
 
     cv2.resizeWindow('Trackbars', 1000, 200)
-    # cv2.resizeWindow('Original',  640, 480)
+    cv2.resizeWindow('Original',  640, 480)
     cv2.resizeWindow('Mask',      800, 640)
     # cv2.resizeWindow('Result',    800, 640)
 
@@ -83,7 +83,7 @@ def main():
         # применяем маску к оригиналу
         # result = cv2.bitwise_and(img, img, mask=mask)
 
-        # cv2.imshow('Original', img)
+        cv2.imshow('Original', img)
         cv2.imshow('Mask', mask)
         # cv2.imshow('Result', result)
 
